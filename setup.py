@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="json-schema-parser",
-    version="1.0.0",
+    version="1.0.1",
     description="Convert between JSON schema definitions and Pydantic models",
     long_description=Path("README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",

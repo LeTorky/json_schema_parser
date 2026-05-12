@@ -199,10 +199,6 @@ class JsonSchemaParser(RootModel[
     @__generate_pydantic_model.register(SimpleTypeInput)
     def _(self, schema: SimpleTypeInput, model_name: str) -> PydanticModelType:
         schema_type = schema.primitive_type
-        if schema.is_many:
-            schema_type = List[schema_type]
-        if schema.is_optional:
-            schema_type = Optional[schema_type]
         return RootModel[schema_type]
 
     @__generate_pydantic_model.register(ComplexTypeInput)

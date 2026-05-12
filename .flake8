@@ -1,0 +1,3 @@
+[flake8]
+max-line-length = 135
+exclude = *.git, __pycache__, .venv, __init__.py, all_modules.py, all_shared.py, src/datax_backend/migrations/*, src/commands/*, local_deployment/artifacts/*
