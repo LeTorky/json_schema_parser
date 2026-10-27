@@ -353,7 +353,8 @@ class JsonSchemaParser(RootModel[
             complex_root = cast(ComplexTypeInput, self.root)
             return complex_root.root == {}
 
-    def get_config(self) -> SimpleTypeInput:
+    @property
+    def config(self) -> SimpleTypeInput:
         """Returns the configuration of the JSON schema if it represents a simple type."""
         if self.is_simple_type:
             return cast(SimpleTypeInput, self.root)
